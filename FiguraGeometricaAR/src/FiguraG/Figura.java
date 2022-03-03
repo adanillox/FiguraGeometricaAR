@@ -21,12 +21,14 @@ System.out.print("Introduce la base de la figura: ");
 base = teclado.nextInt();
 System.out.print("Introduce la altura de la figura: ");
 altura = teclado.nextInt();
-if (base==altura) {
-figura="cuadrado";
-}else
-{figura="rectángulo";
+tipoF.tipoFigura(base, altura);
 }
-int perimetro = 2 * base + 2 * altura;
-System.out.println("La figura es un "+ figura + " y su perímetro es: " + perimetro);
+/**
+ * @param base
+ * @param altura
+ * @deprecated Use {@link tipoF#tipoFigura(int,int)} instead
+ */
+public static void tipoFigura(int base, int altura) {
+	tipoF.tipoFigura(base, altura);
 }
 }
